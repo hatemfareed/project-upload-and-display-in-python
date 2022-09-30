@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>image</title>
+    <link rel="stylesheet" href="{{url_for('static' , filename = 'css/main.css')}}" />
+
+</head>
+<body>
+<h1>the img</h1>
+
+ <center> <img src="{{ filename }}" alt="Mike" height="240px" width="300px"> </center>
+ <div class="content">
+    <a class ='btn' href="{{url_for('display_image')}}">Display</a>
+    <a class = "btn1">                  </a>
+    <a class = "btn" href="{{url_for('upload_image')}}">homepage</a>
+</div>
+</body>
+</html>

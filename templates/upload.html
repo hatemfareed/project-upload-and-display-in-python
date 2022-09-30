@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{title}}</title>
+	<link rel="stylesheet" href="{{url_for('static' , filename = 'css/mystyle.css')}}" />
+</head>
+<body>
+	<form>
+
+		<h2 class="bar">Select an image to upload and display</h2>
+		<!-- <div class = "container2">
+			<a href="{{url_for('display_image')}}" class="btn2">Display</a> 
+			<a href="{{url_for('display_image')}}" class="btn2">list</a> 
+			<a href="{{url_for('display_image')}}" class="btn2">img</a> 
+		</div> -->
+
+	
+	</form>
+	<p>
+		{% with messages = get_flashed_messages() %}
+		{% if messages %}
+	<ul>
+		{% for message in messages %}
+		<li>{{ message }}</li>
+		{% endfor %}
+	</ul>
+	{% endif %}
+	{% endwith %}
+	</p>
+	{% if filename %}
+	<div>
+		<!-- <a href="{{url_for('static', filename='uploads/' + filename)}}" target="_blank">
+				<img src="{{url_for('static', filename='uploads/' + filename)}}" width="200" height="200" />
+			</a> -->
+	
+		<!--<img src="{{ url_for('display_image', filename=filename) }}"> -->
+	</div>
+	{% endif %}
+	<form class="container" method="post" action="/" enctype="multipart/form-data">
+		<dl>
+			<p>
+				<input type='text' name='key' />
+	
+				<input type="file" name="file" autocomplete="off" required>
+	
+			</p>
+		</dl>
+		<p>
+			<input class="btn" type="submit" value="add">
+		</p>
+		<dl>
+	
+			<input class="btn" type="button" value="Back" onclick="history.back()">
+	
+		</dl>
+	</form>
+	<div class="content">
+        <a class ='btn3' href="{{url_for('display_image')}}">display</a>
+
+		<a class ='btn3' href="{{url_for('img')}}">LIST</a>
+    </div>
+	
+</body>
+</html>

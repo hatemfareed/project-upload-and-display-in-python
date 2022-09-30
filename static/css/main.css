@@ -1,0 +1,95 @@
+body, html {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: lightblue;
+}
+
+.content {
+    margin: 0 auto;
+    width: 400px;
+}
+
+table, td, th {
+    border: 1px solid #aaa;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    height: 30px;
+}
+
+td {
+    text-align: center;
+    padding: 5px;
+}
+
+.form {
+    margin-top: 20px;
+}
+
+#content {
+    width: 70%;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0 ;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float: right;
+}
+.btn1 {
+    background-color: lightblue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0 ;
+    border: none;
+    width: 20%;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float: right;
+    opacity: 0.8;
+}
+
+.container {
+    padding: 16px;
+    background-color: #fdfcfc;
+    border: 0.5px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgb(204, 57, 57), 0 5px 5px 0 rgba(204, 57, 57 , 0.3);
+    margin: 0 auto;
+    width: 30%;
+    margin-top: 3%;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}

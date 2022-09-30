@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>Display key</title>
+	<link rel="stylesheet" href="{{url_for('static' , filename = 'css/main.css')}}" />
+
+</head>
+<html>
+    <body>
+
+		<form class = 'container'  method="post" action="/display" enctype="multipart/form-data">
+			<dl>
+				<p>
+					input the key<br><br>
+					<input  type='text' name='key' />
+					
+				</p>
+			</dl>
+			<p>
+				<input  type="submit" value="get" />
+			</p>
+		</form>
+		<div class="content">
+			<a class ='btn' href="{{url_for('img')}}">LIST</a>
+			<a class = "btn1">                  </a>
+			<a class = "btn" href="{{url_for('upload_image')}}">homepage</a>
+		</div>
+
+    <body>    
+</html>

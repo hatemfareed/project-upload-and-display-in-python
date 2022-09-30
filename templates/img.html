@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{titel}}</title>
+    <link rel="stylesheet" href="{{url_for('static' , filename = 'css/main.css')}}" />
+</head>
+<body>
+    <div class="content">
+        <a class ='btn' href="{{url_for('display_image')}}">display</a>
+        <a class = "btn1">                  </a>
+        <a class = "btn" href="{{url_for('upload_image')}}">homepage</a>
+    </div>
+
+    <div class="content">
+        
+		<h1 style="text-align: center">the keys and imgs</h1>
+		{% if tasks|length < 1 %}
+		<h4 style="text-align: center">There are no keys. Create one !</h4>
+		{% else %}
+		<table>
+			<tr>
+				<th>Task</th>
+				<th>Added</th>
+                <th>Action</th>
+			</tr>
+			{% for task in tasks %}
+				<tr>
+					<td>{{ task.key_img }}</td>
+					<td>{{ task.file_path }}</td>
+                    <td>
+                        <a href = "/delete/{{task.id}}" >Delete</a>
+                    </td>
+				</tr>
+
+			{% endfor %}
+		</table>
+		{% endif %}
+        
+            
+        
+</body>
+</html>
